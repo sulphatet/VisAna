@@ -62,7 +62,7 @@ def chunk_text(text: str, max_tokens: int = 2048) -> List[str]:
 # -----------------------------
 
 def query_gemini(chunk: str) -> Dict[str, Any]:
-    genai.configure(api_key="AIzaSyB5w-GjnRy-dlsCwey-Mo3OZz0uS6OulyY")
+    genai.configure(api_key="MY_API_KEY")
     model = genai.GenerativeModel(MODEL_NAME)
     response = model.generate_content([GENERATION_PROMPT, chunk])
     raw = response.text or ""
